@@ -8,6 +8,7 @@ on:
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     permissions:
       contents: write  # Needed to commit changes
 
@@ -36,7 +37,7 @@ jobs:
           LWN_KEY: ${{ secrets.LWN_KEY }}
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run horizon --hours 48
+        run: uv run horizon --hours 6
 
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
