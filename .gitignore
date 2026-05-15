@@ -55,3 +55,6 @@ logs/*.log
 
 # todo
 todo.txt
+
+# Local config backups
+data/config.json.bak
