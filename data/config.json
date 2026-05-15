@@ -19,20 +19,6 @@
   "sources": {
     "github": [
       {
-        "type": "repo_releases",
-        "username": null,
-        "owner": "sgl-project",
-        "repo": "sglang",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "username": null,
-        "owner": "vllm-project",
-        "repo": "vllm",
-        "enabled": true
-      },
-      {
         "type": "user_events",
         "username": "karpathy",
         "owner": null,
@@ -44,27 +30,6 @@
         "username": null,
         "owner": "heejkoo",
         "repo": "awesome-diffusion-models",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "username": null,
-        "owner": "kobiso",
-        "repo": "awesome-flow-based-generative-models",
-        "enabled": true
-      },
-      {
-        "type": "user_events",
-        "username": "torvalds",
-        "owner": null,
-        "repo": null,
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "username": null,
-        "owner": "astral-sh",
-        "repo": "uv",
         "enabled": true
       }
     ],
@@ -81,68 +46,14 @@
         "category": ""
       },
       {
-        "name": "AI Weekly",
-        "url": "https://aiweekly.co/issues.rss",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "Anthropic Research",
-        "url": "https://www.anthropic.com/research/rss",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "量子位",
-        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "新智元",
-        "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "BAIR Blog",
-        "url": "https://bair.berkeley.edu/blog/feed.xml",
-        "enabled": true,
-        "category": ""
-      },
-      {
         "name": "Simon Willison",
         "url": "https://simonwillison.net/atom/everything/",
         "enabled": true,
         "category": ""
       },
       {
-        "name": "Latent Space",
-        "url": "https://www.latent.space/feed",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "Chip Huyen",
-        "url": "https://huyenchip.com/feed.xml",
-        "enabled": true,
-        "category": ""
-      },
-      {
         "name": "Jay Alammar",
         "url": "https://jalammar.github.io/feed.xml",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "Interconnects",
-        "url": "https://www.interconnects.ai/feed",
-        "enabled": true,
-        "category": ""
-      },
-      {
-        "name": "Machine Learning Mastery",
-        "url": "https://machinelearningmastery.com/feed/",
         "enabled": true,
         "category": ""
       },
@@ -159,12 +70,6 @@
         "category": ""
       },
       {
-        "name": "The Batch",
-        "url": "https://www.deeplearning.ai/the-batch/feed/",
-        "enabled": true,
-        "category": ""
-      },
-      {
         "name": "The Gradient",
         "url": "https://thegradient.pub/rss/",
         "enabled": true,
@@ -177,40 +82,16 @@
         "category": ""
       },
       {
-        "name": "Ars Technica AI",
-        "url": "http://feeds.arstechnica.com/arstechnica/artificial-intelligence",
-        "enabled": true,
-        "category": ""
-      },
-      {
         "name": "Nature",
         "url": "https://www.nature.com/nature.rss",
         "enabled": true,
         "category": ""
       },
       {
-        "name": "Lilian Weng's Blog",
-        "url": "https://lilianweng.github.io/feed.xml",
-        "enabled": true,
-        "category": "AI Research"
-      },
-      {
         "name": "Yang Song's Blog",
         "url": "https://yang-song.net/feed.xml",
         "enabled": true,
         "category": "AI Research"
-      },
-      {
-        "name": "Saining Xie's Blog",
-        "url": "https://sainingxie.com/feed.xml",
-        "enabled": true,
-        "category": "AI Research"
-      },
-      {
-        "name": "William Falcon's Blog",
-        "url": "https://williamfalcon.com/feed.xml",
-        "enabled": true,
-        "category": "AI Engineering"
       },
       {
         "name": "LWN.net (subscriber full-text)",
@@ -220,51 +101,10 @@
       }
     ],
     "reddit": {
-      "enabled": true,
-      "subreddits": [
-        {
-          "subreddit": "MachineLearning",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 60
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 60
-        },
-        {
-          "subreddit": "StableDiffusion",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 60
-        },
-        {
-          "subreddit": "artificial",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 60
-        },
-        {
-          "subreddit": "geoscience_ml",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 15,
-          "min_score": 10
-        }
-      ],
+      "enabled": false,
+      "subreddits": [],
       "users": [],
-      "fetch_comments": 10
+      "fetch_comments": 0
     },
     "telegram": {
       "enabled": true,

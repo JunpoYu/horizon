@@ -1,14 +1,23 @@
 name: Daily Horizon Summary
 
 on:
-  # schedule:
-  #   - cron: '0 0 */2 * *'  # Runs every 2 days at 00:00 UTC
-  workflow_dispatch:      # Allow manual trigger
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at 08:00 Asia/Shanghai
+  workflow_dispatch:
+    inputs:
+      hours:
+        description: "Fetch window in hours"
+        required: false
+        default: "24"
+
+concurrency:
+  group: horizon-daily-summary
+  cancel-in-progress: true
 
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     permissions:
       contents: write  # Needed to commit changes
 
@@ -37,7 +46,8 @@ jobs:
           LWN_KEY: ${{ secrets.LWN_KEY }}
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run horizon --hours 6
+          HORIZON_HOURS: ${{ github.event.inputs.hours || '24' }}
+        run: uv run horizon --hours "$HORIZON_HOURS"
 
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
