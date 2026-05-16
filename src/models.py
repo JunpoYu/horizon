@@ -93,6 +93,15 @@ class RSSSourceConfig(BaseModel):
     category: Optional[str] = None
 
 
+class TencentCloudColumnConfig(BaseModel):
+    """Tencent Cloud Developer Community column configuration."""
+
+    name: str
+    column_id: str
+    enabled: bool = True
+    category: Optional[str] = None
+
+
 class RedditSubredditConfig(BaseModel):
     """Configuration for monitoring a specific subreddit."""
     subreddit: str
@@ -151,6 +160,7 @@ class SourcesConfig(BaseModel):
     github: List[GitHubSourceConfig] = Field(default_factory=list)
     hackernews: HackerNewsConfig = Field(default_factory=HackerNewsConfig)
     rss: List[RSSSourceConfig] = Field(default_factory=list)
+    tencent_cloud_columns: List[TencentCloudColumnConfig] = Field(default_factory=list)
     reddit: RedditConfig = Field(default_factory=RedditConfig)
     telegram: TelegramConfig = Field(default_factory=TelegramConfig)
     twitter: Optional[TwitterConfig] = None

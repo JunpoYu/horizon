@@ -17,6 +17,7 @@ from .scrapers.hackernews import HackerNewsScraper
 from .scrapers.rss import RSSScraper
 from .scrapers.reddit import RedditScraper
 from .scrapers.telegram import TelegramScraper
+from .scrapers.tencent_cloud import TencentCloudColumnScraper
 from .scrapers.twitter import TwitterScraper
 from .ai.client import create_ai_client
 from .ai.analyzer import ContentAnalyzer
@@ -251,6 +252,20 @@ class HorizonOrchestrator:
             if self.config.sources.rss:
                 rss_scraper = RSSScraper(self.config.sources.rss, client)
                 tasks.append(self._fetch_with_progress("RSS Feeds", rss_scraper, since))
+
+            # Tencent Cloud Developer Community columns
+            if self.config.sources.tencent_cloud_columns:
+                tencent_cloud_scraper = TencentCloudColumnScraper(
+                    self.config.sources.tencent_cloud_columns,
+                    client,
+                )
+                tasks.append(
+                    self._fetch_with_progress(
+                        "Tencent Cloud Columns",
+                        tencent_cloud_scraper,
+                        since,
+                    )
+                )
 
             # Reddit
             if self.config.sources.reddit.enabled:

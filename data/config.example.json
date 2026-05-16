@@ -55,6 +55,14 @@
         "category": "linux"
       }
     ],
+    "tencent_cloud_columns": [
+      {
+        "name": "气象学家 / EarthAi",
+        "column_id": "84555",
+        "enabled": false,
+        "category": "AI Weather"
+      }
+    ],
     "reddit": {
       "enabled": true,
       "subreddits": [
